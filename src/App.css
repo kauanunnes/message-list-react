@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #F8F1EB;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 55vw;
+  margin: 0 auto;
+  background: #F8F1EB;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.container h1 {
+  color: #201E18;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: .5rem;
+  background: #6B9736;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+button:hover,
+button:focus {
+  background: #516d2e;
+  box-shadow: 0px 0px 3px 5px rgba(107, 151, 54, 0.24);
+  border: 3px solid #6B9736;
+}
+
+.animeLeft {
+  transform: scale(0.8);
+  opacity: 0;
+  animation: animeScale .5s forwards ease;
+}
+
+
+@keyframes animeScale {
   to {
-    transform: rotate(360deg);
+    opacity: initial;
+    transform: initial;
   }
 }
